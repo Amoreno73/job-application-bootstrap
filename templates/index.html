@@ -10,7 +10,8 @@
     <div class ="container">
     <!-- margin top 4 and margin bottom 4, creates a space around the whole form-->
     <h1 class="mt-4 mb-4">Job Application Form</h1>
-    <form>
+    <form method="post">
+        <!-- method post allows us to post data somewhere -->
         <div class="form-group mb-4">  
             <label for="first_name">First Name:</label>
             <input class="form-control" type="text" id="first_name" name="first_name" required>
@@ -31,25 +32,34 @@
             <label>Current occupation: </label>
             <br>
             <div class="btn-group-vertical" id="occupation">
-                <input class="btn-check form-control" type="radio" id="employed" name="employed" required>
+                <input class="btn-check form-control" type="radio" id="employed" name="occupation" value="employed" required>
                 <label class="btn btn-outline-secondary" for="employed">Employed</label>
 
-                <input class="btn-check form-control" type="radio" id="unemployed" name="unemployed" required>
+                <input class="btn-check form-control" type="radio" id="unemployed" name="occupation" value="unemployed">
                 <label class="btn btn-outline-secondary" for="unemployed">Unemployed</label>
 
-                <input class="btn-check form-control" type="radio" id="self-employed" name="self-employed" required>
+                <input class="btn-check form-control" type="radio" id="self-employed" name="occupation" value="self-employed">
                 <label class="btn btn-outline-secondary" for="self-employed">Self-employed</label>
 
-                <input class="btn-check form-control" type="radio" id="student" name="student" required>
+                <input class="btn-check form-control" type="radio" id="student" name="occupation" value="student">
                 <label class="btn btn-outline-secondary" for="student">Student</label>
             </div>
         </div>
-        <button class="btn btn-secondary mb-4" type="button">Submit</button>
+        <button class="btn btn-secondary mb-4" type="submit">Submit</button>
+        <div>
+            Form was submitted successfully!
+        </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </div>
 </body>
 </html>
+
+
+
+
+
+
 
 <!-- Left off at slide 57 -->
